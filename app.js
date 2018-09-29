@@ -16,14 +16,15 @@ class GroceryListItem extends React.Component  {
 
     render() {
         var style = {
-            textDecoration: this.state.done ? 'line-through' : 'none',
+         //   textDecoration: this.state.done ? 'line-through' : 'none',
+            fontWeight: this.state.done ? 'bold' : 'normal'
         };
         // var style2 = {
         //     fontWeight: this.state.done ? 'bold' : 'normal'
         // };
         return(
          //   <li>{this.props.groceryItem}</li>
-            <li style={style} onClick={this.onListItemClick.bind(this)}>{this.props.groceryItem}</li>
+            <li style={style} onMouseOver={this.onListItemClick.bind(this)} onMouseOut={this.onListItemClick.bind(this)}>{this.props.groceryItem}</li>
         );
     }
 }
